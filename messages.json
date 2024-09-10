@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Message from User456",
+    "content": "Hi there! Just wanted to check in.",
+    "received": "15 minutes ago"
+  },
+  {
+    "title": "Message from JaneDoe",
+    "content": "Did you see the latest update?",
+    "received": "30 minutes ago"
+  },
+  {
+    "title": "Message from JohnSmith",
+    "content": "I have a question about the project.",
+    "received": "45 minutes ago"
+  },
+  {
+    "title": "Message from SarahLee",
+    "content": "Attached is the file you requested.",
+    "received": "1 hour ago"
+  },
+  {
+    "title": "Message from MichaelBrown",
+    "content": "Let's schedule a meeting to discuss this.",
+    "received": "2 hours ago"
+  },
+  {
+    "title": "Message from EmilyDavis",
+    "content": "I have an update on the client call.",
+    "received": "3 hours ago"
+  },
+  {
+    "title": "Message from DavidWilson",
+    "content": "Can you take a look at this and let me know?",
+    "received": "4 hours ago"
+  },
+  {
+    "title": "Message from LisaGreen",
+    "content": "I'm running late for our meeting.",
+    "received": "5 hours ago"
+  },
+  {
+    "title": "Message from TomHanks",
+    "content": "Just wanted to say hello and hope you're doing well.",
+    "received": "6 hours ago"
+  },
+  {
+    "title": "Message from SusanBrown",
+    "content": "Have a great day!",
+    "received": "7 hours ago"
+  }
+]

@@ -11,18 +11,21 @@ function Navbar() {
   const user: User = session?.user;
 
   return (
-    <nav className="bg-blue-200 p-4 text-gray-800 shadow-md md:p-6">
-      <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
-        <a href="#" className="mb-4 text-xl font-bold md:mb-0">
+    <nav className="bg-blue-400 p-4 text-gray-800 shadow-md md:p-6">
+      <div className="container mx-auto flex items-center justify-between">
+        <a href="#" className="text-base font-bold sm:text-xl">
           True Nonsense
         </a>
         {session ? (
           <>
-            <span className="mr-4">Welcome, {user.username || user.email}</span>
+            <span className="text-sm sm:text-lg">
+              Welcome, {user.username || user.email}
+            </span>
             <Button
               onClick={() => signOut()}
-              className="w-full bg-gray-300 text-black md:w-auto"
+              className="bg-gray-300 text-black md:w-auto"
               variant="outline"
+              size={"sm"}
             >
               Logout
             </Button>
@@ -30,7 +33,7 @@ function Navbar() {
         ) : (
           <Link href="/sign-in">
             <Button
-              className="w-full bg-gray-300 text-black md:w-auto"
+              className="bg-gray-300 text-black md:w-auto"
               variant={"outline"}
             >
               Login

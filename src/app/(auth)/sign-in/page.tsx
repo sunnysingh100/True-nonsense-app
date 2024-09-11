@@ -91,8 +91,12 @@ export default function SignInForm() {
                 </FormItem>
               )}
             />
-            <Button className="w-full" type="submit">
-              Sign In
+            <Button
+              className="w-full disabled:cursor-not-allowed disabled:opacity-50"
+              type="submit"
+              disabled={form.formState.isSubmitting}
+            >
+              {form.formState.isSubmitting ? "Signing in..." : "Sign in"}
             </Button>
           </form>
         </Form>

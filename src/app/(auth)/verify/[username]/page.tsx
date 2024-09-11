@@ -90,7 +90,7 @@ function VerifyAccount() {
             <Button
               type="submit"
               disabled={form.formState.isSubmitting}
-              className="w-full disabled:opacity-50"
+              className="w-full disabled:cursor-not-allowed disabled:opacity-50"
             >
               {form.formState.isSubmitting ? "Verifying..." : "Verify"}
             </Button>

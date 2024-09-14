@@ -75,9 +75,9 @@ function UserDashboard() {
       } catch (error) {
         const axiosError = error as AxiosError<ApiResponse>;
         toast({
-          title: "Error",
-          description:
+          title:
             axiosError.response?.data.message ?? "Failed to fetch messages",
+
           variant: "destructive",
         });
       } finally {
@@ -143,12 +143,12 @@ function UserDashboard() {
 
   return (
     <div className="min-h-screen bg-blue-300">
-      <div className="mx-4 my-8 w-full max-w-6xl rounded p-6 md:mx-8 lg:mx-auto">
+      <div className="mx-4 my-8 w-full max-w-5xl rounded p-6 md:mx-8 lg:mx-auto">
         <h1 className="mb-4 text-3xl font-bold">User Dashboard</h1>
 
         <div className="mb-4">
           <h2 className="mb-2 text-lg font-semibold">Copy Your Unique Link</h2>{" "}
-          <div className="flex w-full max-w-sm items-center space-x-4 px-1">
+          <div className="flex w-[90%] max-w-sm items-center space-x-4 px-1">
             <Input disabled type="text" value={profileUrl} />
             <Button onClick={copyToClipboard}>{buttonText}</Button>
           </div>

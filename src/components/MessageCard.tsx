@@ -5,7 +5,7 @@ import axios, { AxiosError } from "axios";
 import dayjs from "dayjs";
 import { X } from "lucide-react";
 import { Message } from "@/model/User";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -23,7 +23,7 @@ import { ApiResponse } from "@/types/ApiResponse";
 
 type MessageCardProps = {
   message: Message;
-  onMessageDelete: (messageId: string) => void;
+  onMessageDelete: (messageid: string) => void;
 };
 
 export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
@@ -50,10 +50,10 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
   };
 
   return (
-    <Card className="card-bordered">
+    <Card className="w-[90%]">
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle>{message.content}</CardTitle>
+          <CardTitle className="truncate">{message.content}</CardTitle>
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button variant="destructive">
@@ -81,7 +81,6 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
           {dayjs(message.createdAt).format("MMM D, YYYY h:mm A")}
         </div>
       </CardHeader>
-      <CardContent></CardContent>
     </Card>
   );
 }

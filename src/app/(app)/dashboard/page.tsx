@@ -14,12 +14,16 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AcceptMessageSchema } from "@/schemas/acceptMessageSchema";
 import { Input } from "@/components/ui/input";
+import { useSession } from "next-auth/react";
+import { User } from "next-auth";
 
 function UserDashboard() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isSwitchLoading, setIsSwitchLoading] = useState(false);
   const [buttonText, setButtonText] = useState("Copy");
+
+  const { data: session } = useSession();
 
   const { toast } = useToast();
 
